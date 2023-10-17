@@ -27,7 +27,9 @@ export class RegistrationComponent {
       email: this.email,
       mobile: this.mobile
   };
-  this.http.post('http://localhost:3000/register', requestBody).subscribe(
+  
+  // this.http.post('http://localhost:3000/register', requestBody).subscribe(
+    this.http.post('https://8d9f-2405-201-c016-201e-e9f1-7702-5358-7b31.ngrok-free.app/register', requestBody).subscribe(
     (response) => {
       // Handle a successful response, if needed
       console.log('Registration successful', response);
