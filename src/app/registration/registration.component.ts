@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; 
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-registration',
@@ -10,36 +11,37 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./registration.component.css'],
 })
 export class RegistrationComponent {
-   email: string = '';
-   username: string = '';
-   mobile: string = '';
+  firstname: string = '';
+  lastname: string = '';
+  email: string = '';
+  mobile: string = '';
+  university: string = '';
+  course: string = '';
+  yearofgraduation: string = '';
+  nationality: string = '';
+  socialmediaprofile: string = '';
+  
+  constructor(private router: Router, private http: HttpClient, private dataService: DataService) {}
 
-  constructor(private router: Router, private http: HttpClient) {}
+  userData: any = {}; // Initialize an object to store user data
+
 
   onProceed() {
-    console.log('email data : ' , this.email);
-    console.log('mobile data : ' , this.mobile);
-    console.log('username data : ' , this.username);
+    console.log('user data : ' + this.firstname + ',' + this.lastname + ',' + this.email + ',' + this.mobile + ',' + this.course + ',' + this.university + ',' + this.yearofgraduation + ',' + this.nationality + ',' + this.socialmediaprofile);
     
-    //call backend to save data
-    const requestBody = {
-      username: this.username,
-      email: this.email,
-      mobile: this.mobile
-  };
-  
-  // this.http.post('http://localhost:3000/register', requestBody).subscribe(
-    this.http.post('https://8d9f-2405-201-c016-201e-e9f1-7702-5358-7b31.ngrok-free.app/register', requestBody).subscribe(
-    (response) => {
-      // Handle a successful response, if needed
-      console.log('Registration successful', response);
-    },
-    (error) => {
-      // Handle errors
-      console.error('Error during registration', error);
-    }
-  );
+    this.userData.firstname= this.firstname;
+    this.userData.lastname= this.lastname;
+    this.userData.email= this.email;
+    this.userData.mobile= this.mobile;
+    this.userData.university= this.university;
+    this.userData.course= this.course;
+    this.userData.yearofgraduation= this.yearofgraduation;
+    this.userData.nationality= this.nationality;
+    this.userData.socialmediaprofile= this.socialmediaprofile;
 
-    this.router.navigate(['/thankyou']);
+    // Send the data to the service
+    this.dataService.setUserData(this.userData);
+
+    this.router.navigate(['/pricing']);
   }
 }

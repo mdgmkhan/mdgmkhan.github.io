@@ -1,12 +1,69 @@
+<style>
+  /* Style for the outer container */
+  div {
+    max-width: 300px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+/* Style for the h2 element */
+h2 {
+  font-size: 26px; /* Adjust the font size as needed */
+  text-align: center; /* Center the text */
+  font-weight: normal; /* Apply a specific font-weight, such as bold */
+  color: blue;
+}
+
+  /* Style for labels */
+  label {
+    display: block; /* Make labels appear on separate lines */
+    margin-bottom: 5px; /* Add spacing below labels */
+    font-weight: bold;
+    color: blue;
+    font-size: 20px;
+  }
+
+  /* Style for inputs */
+  input {
+    width: 100%; /* Make inputs expand to the full width of the container */
+    padding: 5px; /* Add padding for spacing within the inputs */
+    margin-bottom: 10px; /* Add spacing below inputs */
+    color: blue;
+  }
+
+  /* Style for the button */
+  button {
+  display: block; /* Make the button appear on a separate line */
+  margin: 0 auto; /* Center the button horizontally */
+  padding: 10px 20px; /* Adjust padding for size */
+  border: 2px solid #007bff; /* Add a border and set the color */
+  border-radius: 5px; /* Add rounded corners */
+  background-color: blue; /* Background color for the button */
+  color: #fff; /* Text color for the button */
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+</style>
+<h2>We woud need below details to match your profile with the right audience.</h2>
 <div>
-    <h2>Registration</h2>
-    <label for="username">Username:</label>
-    <input type="text" [(ngModel)]="username" name="username" required>
+    
+    <label for="firstname">First Name:</label>
+    <input type="text" [(ngModel)]="firstname" name="firstname" required>
+    <label for="lastname">Last Name:</label>
+    <input type="text" [(ngModel)]="lastname" name="lastname" required>
     <label for="email">Email:</label>
     <input type="text" [(ngModel)]="email" name="email" required>
     <label for="mobile">Mobile:</label>
     <input type="text" [(ngModel)]="mobile" name="mobile" required>
+    <label for="university">University/School:</label>
+    <input type="text" [(ngModel)]="university" name="university" required>
+    <label for="course">Course/Degree:</label>
+    <input type="text" [(ngModel)]="course" name="course" required>
+    <label for="yearofgraduation">Year of Graduation:</label>
+    <input type="text" [(ngModel)]="yearofgraduation" name="yearofgraduation" required>
+    <label for="nationality">Nationality:</label>
+    <input type="text" [(ngModel)]="nationality" name="nationality" required>
+    <label for="socialmediaprofile">Social Media Profile:</label>
+    <input type="text" [(ngModel)]="socialmediaprofile" name="socialmediaprofile" required>
   
-    <button (click)="onProceed()">Proceed</button>
+    <button (click)="onProceed()">Just One More Step</button>
   </div>
   

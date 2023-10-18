@@ -1,0 +1,41 @@
+<h2>We would need the following details to match your profile with the right audience.</h2>
+<div class="form">
+    <div class="form-group">
+        <label for="firstname">First Name:</label>
+        <input type="text" [(ngModel)]="firstname" name="firstname" required>
+    </div>
+    <div class="form-group">
+        <label for="lastname">Last Name:</label>
+        <input type="text" [(ngModel)]="lastname" name="lastname" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" [(ngModel)]="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="mobile">Mobile:</label>
+      <input type="text" [(ngModel)]="mobile" name="mobile" required>
+  </div>
+  <div class="form-group">
+      <label for="university">University/School:</label>
+      <input type="text" [(ngModel)]="university" name="university" required>
+  </div>
+  <div class="form-group">
+      <label for="course">Course/Degree:</label>
+      <input type="text" [(ngModel)]="course" name="course" required>
+  </div>
+  <div class="form-group">
+    <label for="yearofgraduation">Year of Graduation:</label>
+    <input type="text" [(ngModel)]="yearofgraduation" name="yearofgraduation" required>
+</div>
+<div class="form-group">
+    <label for="nationality">Nationality:</label>
+    <input type="text" [(ngModel)]="nationality" name="nationality" required>
+</div>
+<div class="form-group">
+    <label for="socialmediaprofile">Social Media Profile:</label>
+    <input type="text" [(ngModel)]="socialmediaprofile" name="socialmediaprofile" required>
+</div>
+    
+    <button (click)="onProceed()">Just One More Step</button>
+</div>
