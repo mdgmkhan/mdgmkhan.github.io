@@ -41,8 +41,8 @@ export class PricingComponent implements OnInit{
       socialmediaprofile: this.userData.socialmediaprofile,
       price : this.userData.price  };
 
-  this.http.post('http://localhost:3000/register', requestBody).subscribe(
-    // this.http.post('https://8d9f-2405-201-c016-201e-e9f1-7702-5358-7b31.ngrok-free.app/register', requestBody).subscribe(
+  // this.http.post('http://localhost:3000/register', requestBody).subscribe(
+    this.http.post('https://29af-49-37-131-171.ngrok-free.app/register', requestBody).subscribe(
     (response) => {
       // Handle a successful response, if needed
       console.log('Registration successful', response);
