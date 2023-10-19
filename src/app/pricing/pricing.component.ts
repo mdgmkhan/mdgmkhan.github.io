@@ -42,7 +42,7 @@ export class PricingComponent implements OnInit{
       price : this.userData.price  };
 
   // this.http.post('http://localhost:3000/register', requestBody).subscribe(
-    this.http.post('https://29af-49-37-131-171.ngrok-free.app/register', requestBody).subscribe(
+    this.http.post('https://a965-49-37-131-171.ngrok-free.app/register', requestBody).subscribe(
     (response) => {
       // Handle a successful response, if needed
       console.log('Registration successful', response);
