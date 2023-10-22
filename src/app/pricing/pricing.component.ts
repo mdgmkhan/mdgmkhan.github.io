@@ -45,7 +45,7 @@ export class PricingComponent implements OnInit{
     this.http.post('https://a965-49-37-131-171.ngrok-free.app/register', requestBody).subscribe(
     (response) => {
       // Handle a successful response, if needed
-      console.log('Registration successful', response);
+      console.log('Registration successful!', response);
     },
     (error) => {
       // Handle errors
